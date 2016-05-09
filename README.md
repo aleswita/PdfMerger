@@ -38,4 +38,5 @@ final class HomePresenter extends BasePresenter
     $this->pdfMerger->setOutputFile("test.pdf")
       ->merge();
   }
+}
 ```
