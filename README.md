@@ -1,5 +1,5 @@
 # PdfMerger
-PDF Merger for Nette Framework and Ghost Script.
+PdfMerger for Nette Framework and Ghost Script.
 
 ## Installation
 The best way to install AlesWita/PdfMerger is using [Composer](http://getcomposer.org/):
