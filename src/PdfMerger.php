@@ -20,7 +20,7 @@ class PdfMerger
 		"-dBATCH",
 		"-sDEVICE=pdfwrite",
 	];
-	const OUTPUT_FILE_NAME = "NewPdf.pdf";
+	const OUTPUT_FILE = "NewPdf.pdf";
 
 	/** @var string */
 	private $program = self::PROGRAM;
@@ -29,7 +29,7 @@ class PdfMerger
 	private $params = self::PARAMS;
 
 	/** @var string */
-	private $outputFileName = self::OUTPUT_FILE_NAME;
+	private $outputFile = self::OUTPUT_FILE;
 
 	/** @var string */
 	private $command;
@@ -82,8 +82,8 @@ class PdfMerger
 	 * @param string
 	 * @return self
 	 */
-	public function setOutputFileName(string $fileName): self {
-		$this->outputFileName = $fileName;
+	public function setOutputFile(string $file): self {
+		$this->outputFile = $file;
 		return $this;
 	}
 
@@ -104,15 +104,15 @@ class PdfMerger
 	/**
 	 * @return string
 	 */
-	public function getOutputFileName(): string {
-		return $this->outputFileName;
+	public function getOutputFile(): string {
+		return $this->outputFile;
 	}
 
 	/**
 	 * @return string
 	 */
 	public function getCommand(): string {
-		return $this->program . " " . implode(" ", $this->params) . $this->outputFileName . " " . implode(" ", $this->files);
+		return $this->program . " " . implode(" ", $this->params) . $this->outputFile . " " . implode(" ", $this->files);
 	}
 
 	public function merge()
