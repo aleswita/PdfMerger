@@ -1,0 +1,19 @@
+{
+        "name": "aleswita/pdfmerger",
+        "description": "PDF Merger for Nette Framework and Ghost Script.",
+        "keywords": ["nette","pdf merger","ghost script"],
+        "license": ["MIT"],
+        "authors": [
+                {
+                        "name": "Aleš Wita",
+                        "email": "aleswita+github@gmail.com"
+                }
+        ],
+        "require": {
+                "php": ">=7.0.0",
+                "nette/application": ">=2.3"
+        },
+        "autoload": {
+                "classmap": ["/"]
+	}
+}
