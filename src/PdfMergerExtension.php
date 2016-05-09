@@ -19,7 +19,7 @@ class PdfMergerExtension extends Nette\DI\CompilerExtension
 	public $defaults = [
 		"program" => PdfMerger::PROGRAM,
 		"params" => PdfMerger::PARAMS,
-		"outputFileName" => PdfMerger::OUTPUT_FILE_NAME,
+		"outputFile" => PdfMerger::OUTPUT_FILE,
 	];
 
 	public function loadConfiguration()
@@ -36,8 +36,8 @@ class PdfMergerExtension extends Nette\DI\CompilerExtension
 		if ($config["params"] !== PdfMerger::PARAMS) {
 			$pdfMerger->addSetup('$service->setParams(?)', [$config["params"]]);
 		}
-		if ($config["outputFileName"] !== PdfMerger::OUTPUT_FILE_NAME) {
-			$pdfMerger->addSetup('$service->setOutputFileName(?)', [$config["outputFileName"]]);
+		if ($config["outputFile"] !== PdfMerger::OUTPUT_FILE) {
+			$pdfMerger->addSetup('$service->setOutputFile(?)', [$config["outputFile"]]);
 		}
 	}
 }
