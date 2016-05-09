@@ -1,2 +1,2 @@
 # PdfMerger
-Visual Paginator for Nette Framework and Ghost Script.
+PDF Merger for Nette Framework and Ghost Script.
