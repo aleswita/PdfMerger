@@ -28,7 +28,7 @@ class PdfMergerExtension extends Nette\DI\CompilerExtension
 		$container = $this->getContainerBuilder();
 
 		$pdfMerger = $container->addDefinition($this->prefix("pdfmerger"))
-			->setClass("AlesWita\PdfMerger");
+			->setClass("AlesWita\\PdfMerger");
 
 		if ($config["program"] !== PdfMerger::PROGRAM) {
 			$pdfMerger->addSetup('$service->setProgram(?)', [$config["program"]]);
