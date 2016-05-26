@@ -115,6 +115,13 @@ class PdfMerger
 		return $this->program . " " . implode(" ", $this->params) . $this->outputFile . " " . implode(" ", $this->files);
 	}
 
+	/**
+	 * @return array
+	 */
+	public function getFiles(): array {
+		return $this->files;
+	}
+
 	public function merge()
 	{
 		$this->params[] = "-sOutputFile=";
