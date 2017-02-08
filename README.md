@@ -29,8 +29,7 @@ final class HomePresenter extends BasePresenter
 
   ...
   
-  public function handleMergePdf(array $files)
-  {
+  public function handleMergePdf(array $files): void {
     foreach ($files as $file) {
       $this->pdfMerger->addPdf($file);
     }
