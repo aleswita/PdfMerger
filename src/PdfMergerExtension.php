@@ -5,6 +5,8 @@
  * Copyright (c) 2016 Ales Wita (aleswita@gmail.com)
  */
 
+declare(strict_types=1);
+
 namespace AlesWita;
 
 use Nette;
@@ -13,7 +15,7 @@ use Nette;
 /**
  * @author Aleš Wita
  */
-class PdfMergerExtension extends Nette\DI\CompilerExtension
+final class PdfMergerExtension extends Nette\DI\CompilerExtension
 {
 	/** @var array */
 	public $defaults = [
@@ -22,8 +24,10 @@ class PdfMergerExtension extends Nette\DI\CompilerExtension
 		"outputFile" => PdfMerger::OUTPUT_FILE,
 	];
 
-	public function loadConfiguration()
-	{
+	/**
+	 * @return void
+	 */
+	public function loadConfiguration(): void {
 		$config = $this->getConfig($this->defaults);
 		$container = $this->getContainerBuilder();
 
