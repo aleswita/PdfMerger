@@ -10,8 +10,8 @@
                 }
         ],
         "require": {
-                "php": "~7.0.0 || ~7.1.0",
-                "nette/application": "~2.3.0 || ~2.4.0"
+                "php": "~7.1.0",
+                "nette/application": "~2.4.0 || ~3.0.0"
         },
         "autoload": {
                 "classmap": ["/"]
