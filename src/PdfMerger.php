@@ -5,6 +5,8 @@
  * Copyright (c) 2016 Ales Wita (aleswita@gmail.com)
  */
 
+declare(strict_types=1);
+
 namespace AlesWita;
 
 
@@ -122,8 +124,10 @@ class PdfMerger
 		return $this->files;
 	}
 
-	public function merge()
-	{
+	/**
+	 * @return void
+	 */
+	public function merge(): void {
 		$this->params[] = "-sOutputFile=";
 
 		shell_exec($this->getCommand());
