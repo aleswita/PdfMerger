@@ -35,13 +35,13 @@ final class PdfMergerExtension extends Nette\DI\CompilerExtension
 			->setClass("AlesWita\\PdfMerger");
 
 		if ($config["program"] !== NULL) {
-			$pdfMerger->addSetup('$service->setProgram(?)', [$config["program"]]);
+			$pdfMerger->addSetup("\$service->setProgram(?)", [$config["program"]]);
 		}
 		if ($config["params"] !== NULL) {
-			$pdfMerger->addSetup('$service->setParams(?)', [$config["params"]]);
+			$pdfMerger->addSetup("\$service->setParams(?)", [$config["params"]]);
 		}
 		if ($config["outputFile"] !== NULL) {
-			$pdfMerger->addSetup('$service->setOutputFile(?)', [$config["outputFile"]]);
+			$pdfMerger->addSetup("\$service->setOutputFile(?)", [$config["outputFile"]]);
 		}
 	}
 }
